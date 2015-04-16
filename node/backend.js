@@ -1,3 +1,6 @@
+// Con -- node backend.js -- arranco el server
+// 127.0.0.1:8080 esta es la ip que toda computadora tiene que apunta hacia uno mismo
+
 var basededatos = {
 	usuario : "jmejia",
 	password : 1234
@@ -40,7 +43,6 @@ web.get("/test", function(req, res){ // Requerimiento / Respuesta
 web.get("/john/prueba", function(req, res){
 	res.send("Prueba url desde: " + ciudad);
 });
-
 
 // Nota: Instalar sudo npm install body-parser para poder enviar formularios a tráves 
 // de POST, recomendación, instalarla en la carpeta del proyecto y no global
