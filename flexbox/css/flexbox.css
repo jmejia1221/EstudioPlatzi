@@ -1,0 +1,85 @@
+/*	Aquí trabajamos con la propiedad display:table;
+	con table-cell siempre van a tener el mismo heigh las cajas
+	hijas de display:table
+*/
+
+/*	CON LAYOUT SIMPLES USAR DISPLAY:TABLE CON LAYOUT GRANDES 
+	USAR FLEXBOX*/
+main{
+	display: table;
+	caption-side: bottom; /*Envio el header abajo*/
+}
+	header{
+		display: table-caption; /*Se utiliza para el header*/
+	}
+
+	section{
+		display: table-cell; /*Con table-row en vez de una columna creo una fila*/
+		background-color: #333;
+		width: 80%;
+	}
+
+	aside{
+		display: table-cell;
+		background-color: #eee;
+		width: 20%;
+	}
+
+.content-flexbox{
+	display: flex;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	background-color: #fff;
+	border: 1px solid #333;
+	justify-content: space-around;
+	-moz-justify-content: space-around;
+}
+
+	.item{
+		width: 200px;
+		height: 200px;
+	}
+
+	.bgcolorGray{
+		background-color: gray;
+	}
+
+	.bgcolorBlack{
+		background-color: #000;
+	}
+
+	.bgcolorBlue{
+		background-color: blue;
+	}
+
+	#container > div {
+  display: flex;
+  font-family: Courier New, Lucida Console, monospace;
+}
+
+#container > div > div {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(-45deg, #788cff, #b4c8ff);
+}
+
+#flex-start {
+  justify-content: flex-start;
+}
+
+#center {
+  justify-content: center;
+}
+
+#flex-end {
+  justify-content: flex-end;
+}
+
+#space-between {
+  justify-content: space-between;
+}
+
+#space-around {
+  justify-content: space-around;
+}
