@@ -22,3 +22,10 @@ body{
 		padding: 0;
 		list-style: none;
 	}
+	.temperature::after{
+		content:attr(data-unidad);
+		font-size: 12px;
+		font-family: courier;
+		color: red;
+		font-weight: bold;
+	};
