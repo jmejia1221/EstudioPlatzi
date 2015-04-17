@@ -1,0 +1,24 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.weather-card{
+	background-color: #f8f8f8;
+	padding: .5em;
+}
+	.weather-card__header{
+		margin: 0;
+	}
+	.weather-card__date{
+		margin: 0 0 .5em 0;
+		display: block;
+		font-weight: normal;
+		font-size: 12px;
+		font-family: courier;
+		border-bottom: 1px solid #ccc;
+	}
+	.weather-card__footer{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}

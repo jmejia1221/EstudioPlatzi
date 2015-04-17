@@ -3,29 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Metodología BEM (Block Element Modify)</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+	.persona{ ... } /*Este es mi bloque*/ 
+		.persona__brazo{ ... }  /*Este es el elemento de persona*/ 
+		.persona__pie { ... }  /*Este es el elemento de persona */
+			.persona__pie--izquierdo{ ... }  /*Es un elemento con un modificador */
+
+		.persona--mujer{ ... }  /*Este es el modificador */
+		.persona--oriental{ ... }  /*Este es un modificador */
+	</style>
 </head>
-
-<style>
-.persona{ ... } /*Este es mi bloque*/ 
-	.persona__brazo{ ... }  /*Este es el elemento de persona*/ 
-	.persona__pie { ... }  /*Este es el elemento de persona */
-		.persona__pie--izquierdo{ ... }  /*Es un elemento con un modificador */
-
-	.persona--mujer{ ... }  /*Este es el modificador */
-	.persona--oriental{ ... }  /*Este es un modificador */
 	
-</style>
 <body>
 
-	<div class="">
-		<h3 class=""></h3>
-		<h4 class=""></h4>
+	<h1>Titulo</h1>
+	<span class="weather-card__date">Subtitulo</span>
+
+	<div class="weather-card"> <!-- Cuando la clase solo tiene un - es un nombre único, es una especie de abstracción donde se le agrega los modificadores -->
+		<h3 class="weather-card__header">Sunnyvale</h3>
+		<h4 class="weather-card__date">March, 25th</h4>
 		<img src="" alt="" class="">
-		<ul>
-			<li class=""></li>
-			<li class=""></li>
-			<li class=""><span class=""></span> | <span class=""></span> </li>
-			<li class=""></li>
+		<ul class="weather-card__footer">
+			<li class="weather-card__footer__item">Elemento 1</li>
+			<li class="weather-card__footer__item">Elemento 2</li>
+			<li class="weather-card__footer__item">Elemento 3</li>
+			<li class="weather-card__footer__item">Elemento 4</li>
 		</ul>
 	</div>
 </body>
