@@ -1,3 +1,39 @@
 html{
-	font-family: arial, sans-serif;
+	font-family: 'Roboto', arial, sans-serif;
+	font-size: 110%;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+.main-header{
+	text-align: center;
+	background-color: #16210b;
+	color: #fff;
+	padding: 4em;
+}
+	.main-header h1{
+		margin: 0;
+	}
+	.main-header h2{
+		font-size: 1rem;
+		font-weight: normal;
+	}
+
+.card{
+	height: 30vh;
+	width: 100%;
+	background-color: #f8f8f8;
+}
+
+/*min-width=Del infinito a 0*/ /*max-width= de 0 al infinito*/
+/*Recomendable usar em en vez de px*/
+@media(min-width: 400px){ 
+	.main-header{
+		font-size: 80%;
+	}
+}
+
+@media screen(orientation:landscape){ /*Cuando gire el mobile*/
+	
 }
