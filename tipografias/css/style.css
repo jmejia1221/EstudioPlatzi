@@ -23,11 +23,40 @@ body{
 .card{
 	height: 30vh;
 	width: 100%;
-	background-color: #f8f8f8;
+	font-size: cover;
+	padding: .4em;
+	font-family: 'Megrim', cursive;
+	position: relative;
 }
+	
+	.card--valencia{
+		background-image: url(../img/valencia-small.jpg);
+	}
+
+	.card--mv{
+		background-image: url(../img/valencia-small.jpg);
+	}
+
+	.card__title{
+		margin: 0;
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	.card__date{
+		font-size: .7rem;
+		margin: 0;
+		text-align: center;
+	}
 
 /*min-width=Del infinito a 0*/ /*max-width= de 0 al infinito*/
 /*Recomendable usar em en vez de px*/
+@media(min-width: 32em){
+	.card{
+		background-image: url(../img/valencia.jpg);
+		background-position: center;
+	}
+}
 @media(min-width: 400px){ 
 	.main-header{
 		font-size: 80%;
@@ -37,3 +66,29 @@ body{
 @media screen(orientation:landscape){ /*Cuando gire el mobile*/
 	
 }
+
+	.card__info{
+		position: absolute;
+		bottom: .4em;
+		left: .4em;
+		background-color: rgba(255,255,255,.7);
+		text-align: center;
+	}
+
+	.card__image{
+		display: block;
+	}
+
+	.card__temp{
+		display: block;
+		font-size: 3rem;
+		line-height: 1;
+	}
+
+	.card__maxt::before{
+		content: "Max: ";
+	}
+
+	.card__mint::before{
+		content: "Min: ";
+	}
