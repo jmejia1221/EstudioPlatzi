@@ -19,32 +19,23 @@
 	</header>
 
 	<main class="cards-group">
-		<div class="card card--valencia">
-			<header class="card__header">
-				<h3 class="card__title">Valencia</h3>
-				<h4 class="card__date">07:39 am</h4>
-			</header>
-			<div class="card__info">
-				<img class="card__image" src="http://openweathermap.org/img/w/02d.png" alt="" class="">
-				<span class="card__maxt">18°</span>
-				<span class="card__mint">18°</span>
-				<span class="card__temp">18°</span>
+		<template id="template--city">
+			<div class="card card--valencia">
+				<header class="card__header">
+					<h3 class="card__title">Valencia</h3>
+					<h4 class="card__date">07:39 am</h4>
+				</header>
+				<div class="card__info">
+					<img class="card__image" src="http://openweathermap.org/img/w/02d.png" alt="" class="">
+					<span class="card__maxt">18°</span>
+					<span class="card__mint">18°</span>
+					<span class="card__temp">18°</span>
+				</div>
 			</div>
-		</div>
-
-		<div class="card card--mv">
-			<header class="card__header">
-				<h3 class="card__title">Mountain View</h3>
-				<h4 class="card__date">07:39 am</h4>
-			</header>
-			<div class="card__info">
-				<img class="card__image" src="http://openweathermap.org/img/w/02d.png" alt="" class="">
-				<span class="card__maxt">18°</span>
-				<span class="card__mint">18°</span>
-				<span class="card__temp">18°</span>
-			</div>
-		</div>
+		</template>
 	</main>
-	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>	
+	<script src="js/weather.js"></script>
 </body>
 </html>

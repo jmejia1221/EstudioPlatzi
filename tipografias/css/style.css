@@ -21,20 +21,22 @@ body{
 	}
 
 .card{
+	color: #fff;
 	height: 30vh;
 	width: 100%;
 	font-size: cover;
 	padding: .4em;
 	font-family: 'Megrim', cursive;
 	position: relative;
+	background-color: #333;
 }
 	
 	.card--valencia{
-		background-image: url(../img/valencia-small.jpg);
+		/*background-image: url(../img/valencia-small.jpg);*/
 	}
 
 	.card--mv{
-		background-image: url(../img/valencia-small.jpg);
+		/*background-image: url(../img/valencia-small.jpg);*/
 	}
 
 	.card__title{
@@ -53,8 +55,7 @@ body{
 /*Recomendable usar em en vez de px*/
 @media(min-width: 32em){
 	.card{
-		background-image: url(../img/valencia.jpg);
-		background-position: center;
+		background-color: #333;
 	}
 }
 @media(min-width: 400px){ 
@@ -71,7 +72,6 @@ body{
 		position: absolute;
 		bottom: .4em;
 		left: .4em;
-		background-color: rgba(255,255,255,.7);
 		text-align: center;
 	}
 
