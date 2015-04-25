@@ -92,3 +92,9 @@ body{
 	.card__mint::before{
 		content: "Min: ";
 	}
+	
+	.card__temp::after,
+	.card__maxt::after,
+	.card__mint::after{
+		content: "°C";
+	}
