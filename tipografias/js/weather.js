@@ -1,9 +1,9 @@
 (function(){
 
-	var API_WORLDTIME_KEY = "d6a4075ceb419113c64885d9086d5";
-	var API_WORLDTIME = "http://api.worldweatheronline.com/free/v2/tz.ashx?format=json&key=" + API_WORLDTIME_KEY + "&q=";
-	var API_WEATHER_KEY = "80114c7878f599621184a687fc500a12";
-	var API_WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather?" + API_WEATHER_KEY + "&";
+	 var API_WORLDTIME_KEY = "d6a4075ceb419113c64885d9086d5";
+  var API_WORLDTIME = "https://api.worldweatheronline.com/free/v2/tz.ashx?format=json&key="+ API_WORLDTIME_KEY +"&q=";
+  var API_WEATHER_KEY = "80114c7878f599621184a687fc500a12";
+  var API_WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather?APPID=" + API_WEATHER_KEY + "&";
 
 	var IMG_WEATHER = "http://openweathermap.org/img/w/";
 
@@ -85,7 +85,7 @@
 			timeToShow = timeNow;
 		}
 
-		clone.querySelector("[data-time]").innerHTML = timeNow;
+		clone.querySelector("[data-time]").innerHTML = timeToShow;
 		clone.querySelector("[data-city]").innerHTML = cityWeather.zone;
 		clone.querySelector("[data-icon]").src = cityWeather.icon;
 		clone.querySelector("[data-temp='current']").innerHTML = cityWeather.temp.toFixed(1);
