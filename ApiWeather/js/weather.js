@@ -14,7 +14,9 @@
 	var $loader = $(".loader");
 	var nombreNuevaCiudad = $("[data-input='cityAdd']");
 	var buttonAdd = $("[data-button='add']");
+	var buttonLoad = $("[data-saved-cities]");
 
+	var cities = [];
 	var cityWeather = {};
 
 	cityWeather.zone;
@@ -28,9 +30,11 @@
 
 	$( nombreNuevaCiudad ).on("keypress", function(event){
 		if(event.which == 13){
-			addNewCity();
+			addNewCity(event);
 		}
 	});
+
+	$( buttonLoad ).on("click", loadSavedCities);
 
 	if(navigator.geolocation){
 
@@ -105,6 +109,8 @@
 
 		$.getJSON(API_WORLDTIME + $( nombreNuevaCiudad ).val(), function(response){
 
+			$(nombreNuevaCiudad).val("");
+
 			cityWeather = {};
 			cityWeather.zone = data.name;
 			cityWeather.icon = IMG_WEATHER + data.weather[0].icon + ".png";
@@ -115,8 +121,23 @@
 
 			renderTemplate(cityWeather, response.data.time_zone[0].localtime);
 
+			cities.push(cityWeather); // Push nos permite guardar un elemento en el array cities
+			localStorage.setItem("cities", JSON.stringify(cities));
 		});
 	};
+
+	function loadSavedCities(event){
+		event.preventDefault();
+
+		function renderCities(cities){
+			cities.forEach(function(city){
+				renderTemplate(city);
+			});
+		};
+
+		var cities = JSON.parse( localStorage.getItem("cities") );
+		renderCities(cities);
+	}
 
 
 })();
